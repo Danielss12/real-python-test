@@ -1,0 +1,91 @@
+Create Virtual env:
+
+-Navigate to directory
+-$ virtualenv env --- CREATE VIRTUAL ENV
+-$ source env/bin/activate --- THIS FOLDER IS NOW CONSIDERED THE ROOT OF THE SYSTEM.
+---------------------------------------------------------------------------------------------
+
+
+
+Create a Local Repo
+1. Go to your “real-python-test” folder to initialize (create) your local repo (make sure to
+activate your virtualenv first):
+1
+$ git init
+
+
+2. Next add a add a file called README.md . It’s convention to have such a file, stating
+the purpose of your project, so that when added to Github, other users can get a quick
+sense of what your project is all about.
+1
+$ touch README.md
+
+4. Now let’s add the file to your local repo. First we need to take a “snapshot” of the project
+in it’s current state:
+1
+$ "git add ."
+
+
+This essentially adds all files that have either been created, updated, or deleted to a
+place called “staging”.
+
+5. Okay. So to add the project to your repo, you need to run the following command:
+1
+$ git commit -am "My initial commit message"
+Sweet! Now your project has been committed (or added) to your local repo. Let’s add (PUSH)
+it to Github now
+
+1. Add a link to your remote repository. Return to Github. Copy the command to add
+your remote repo, then paste it into your terminal:
+1
+$ git remote add origin
+https://github.com/<YOUR-USERNAME>/real-python-test.git
+2. Finally, PUSH (or send) the local repo
+
+Let’s review.
+When starting a new repository, you need to follow these steps:
+1. Add the repo on Github.
+2. Run the following commands in your local directory:
+
+git init
+touch README.md
+git add .
+git commit -am "message"
+git remote add origin
+https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
+$ git push origin master
+38Again, this creates the necessary files and pushes them to the remote repository on
+Github.
+3. Next, after your repo has been created locally and remotely - and you completed your
+first PUSH - you can follow this similar workflow to PUSH as needed:
+
+
+$ git add .
+$ git commit -am 'message'
+$ git push origin master
+
+NOTE: The string within the commit command should be replaced each
+time with a brief description of the changes made since the last PUSH.
+4. That’s it. With regard to Git, it’s essential that you know how to:
+• Create a local and remote repo,
+• Add and commit, and
+• Push your local copy to Github.
+
+
+1. So, we have one directory, “RealPython”, that will contain all of your projects.
+
+2. Each of those project directories will contain a separate virtualenv, Git repo, and .git-
+ignore file.
+
+3. Finally, we want to setup a requirements.txt file for each virtualenv. This file contains a
+list of packages you’ve installed via Pip. This is meant to be used by other developers to
+recreate the same development environment. To do this run the following command
+when your virtualenv is activated:
+
+pip freeze > requirements.txt
+
+
+Again, you have your main directory called “RealPython” then within that direc-
+tory, you’ll create several project directories, each containing - a virtualenv, a
+Git repo, a .gitignore file, and a requirements.txt file.
+-------------------------------------------------------------------------------------------------------

@@ -1,0 +1,34 @@
+FLASK	
+
+What’s going on here?
+Let’s first look at the code without the function:
+1
+from flask import Flask
+2
+3
+app = Flask(__name__)
+4
+5
+6
+if __name__ == "__main__":
+app.run()
+1. First, we imported the Flask class from the flask library in order to create our web
+application.
+2. Next, we created an instance of the Flask class and assigned it to the variable app .
+3. Finally, we used the run() method to run the app locally. By setting the __name__
+variable equal to "__main__" , we indicated that we’re running the statements in the
+current file (as a module) rather than importing it. Does this make sense? If not, check
+out this link. You can read more about modules from the Python official documenta-
+tion.
+
+--------------------
+
+1. Here we applied two decorators - @app.route("/") and @app.route("/hello")
+to the hello_world() function. These decorators are used to define routes. In other
+words, we created two routes - / and /hello - which are bound to our main url,
+http://127.0.0.1:5000. Thus, we are able to access the function by navigating to either
+http://127.0.0.1:5000 or http://127.0.0.1:5000/hello.
+2. The function simply returned the string “Hello, World!”.
+
+--------------------
+
